@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var numberCollection_1 = __importDefault(require("./numberCollection"));
+var characterCollection_1 = __importDefault(require("./characterCollection"));
+var linkListCollection_1 = __importDefault(require("./linkListCollection"));
+var myNumberSorter = new numberCollection_1.default([1, 2, 0, 4, 3, 23, 14, 11]);
+myNumberSorter.bubbleSort();
+console.log(myNumberSorter.data);
+var myCharSorter = new characterCollection_1.default("XGhnvqwua");
+myCharSorter.bubbleSort();
+console.log(myCharSorter.data);
+var myList = new linkListCollection_1.default();
+myList.add(5);
+myList.add(2);
+myList.add(6);
+myList.add(1);
+myList.bubbleSort();
+console.log(JSON.stringify(myList));
